@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "9e55aa05-26be-4de9-8a3c-9f08a2ccf68a",
+		"name": "Data_Puser_PATADEL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40736869"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/accounts/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"testuser1@example.com\",\n  \"name\": \"Test User 1\",\n  \"website\": \"https://example1.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/accounts/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/accounts/94fdaaf8-0ef2-431d-9068-b48c4a590934",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/accounts/05b0f4d6-e4a0-41a6-8d92-b7edfc662245",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"accounts",
+						"05b0f4d6-e4a0-41a6-8d92-b7edfc662245"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/destinations/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"account_id\": \"c6b0e76c-2a3f-4fc1-bb90-219eb1aa97b5\",\n  \"url\": \"https://webhook.site/your-custom-url\",\n  \"http_method\": \"POST\",\n  \"headers\": {\n    \"APP_ID\": \"1234APPID1234\",\n    \"APP_SECRET\": \"example_secret\",\n    \"ACTION\": \"user.update\",\n    \"Content-Type\": \"application/json\",\n    \"Accept\": \"*\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/destinations/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"destinations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/destinations/05b0f4d6-e4a0-41a6-8d92-b7edfc662245",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/destinations/05b0f4d6-e4a0-41a6-8d92-b7edfc662245",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"destinations",
+						"05b0f4d6-e4a0-41a6-8d92-b7edfc662245"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/server/incoming_data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "CL-XTOKEN",
+						"value": "22f0c799-e5bc-49b4-b681-bc2c39c5bc81"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"Hello, this is a test payload!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/server/incoming_data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"server",
+						"incoming_data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
